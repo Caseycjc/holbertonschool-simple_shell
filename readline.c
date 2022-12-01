@@ -7,7 +7,6 @@ int main()
 {
 	char *buffer;
 	size_t bufsize = 32;
-
 	buffer = (char *)malloc(bufsize * sizeof(char));
 	if( buffer == NULL)
 	{
@@ -15,7 +14,7 @@ int main()
 		exit(1);
 	}
 
-	printf("$\n");
+	printf("$ ");
 	getline(&buffer, &bufsize, stdin);
 	printf("$ %s\n", buffer);
 
