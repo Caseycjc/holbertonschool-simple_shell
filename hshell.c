@@ -5,8 +5,11 @@ int main(void)
     while (true)
     {
         printf("$ ");
-        char *line = hshell_readline();
-        char **tokens = hshell_splitline(line);
+        char *line;
+        char **tokens;
+
+        line = hshell_readline();
+        tokens = hshell_splitline(line);
 
         if (tokens[0] != NULL)
         {
