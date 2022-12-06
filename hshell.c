@@ -2,11 +2,11 @@
 
 int main(void)
 {
+    char *line;
+    char **tokens;
     while (true)
     {
         printf("$ ");
-        char *line;
-        char **tokens;
 
         line = hshell_readline();
         tokens = hshell_splitline(line);
