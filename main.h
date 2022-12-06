@@ -1,12 +1,17 @@
 #ifndef _SHELL_
 #define _SHELL_
 
-#include <sys/wait.h>
-#include <unistd.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stddef.h>
+#include <sys/wait.h>
+#include <unistd.h>
 
-int input(char *s, int length);
-int main(int argc, char *argv[]);
+int main(void);
+char* hshell_readline();
+char** hshell_splitline(char *line);
+void hshell_exec(char **args);
+
 #endif
