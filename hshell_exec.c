@@ -1,6 +1,6 @@
 #include "main.h"
 
-void kash_exec(char **args)
+void hshell_exec(char **args)
 {
     pid_t child_pid = fork();
 
