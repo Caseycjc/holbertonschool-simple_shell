@@ -7,7 +7,8 @@ int main(void)
 	while (true)
 
 	{
-		printf("$ ");
+		if (isatty (STDIN_FILENO))
+			write(STDOUT_FILENO, "$ ", 2);
 
 		line = hshell_readline();
 		tokens = hshell_splitline(line);
@@ -18,6 +19,6 @@ int main(void)
 		}
 		free(tokens);
 		free(line);
-
+		
 	}
 }
