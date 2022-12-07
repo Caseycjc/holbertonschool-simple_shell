@@ -9,6 +9,7 @@ char* hshell_readline(void)
 	{
 		if (feof(stdin))
 		{
+			free(line);
 			exit(EXIT_SUCCESS);
 		}
 		else
