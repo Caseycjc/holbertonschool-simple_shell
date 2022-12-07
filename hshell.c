@@ -7,6 +7,8 @@ int main(void)
 	while (true)
 
 	{
+		printf("$ ");
+
 		line = hshell_readline();
 		tokens = hshell_splitline(line);
 
@@ -17,6 +19,5 @@ int main(void)
 		free(tokens);
 		free(line);
 
-		printf("$ ");
 	}
 }
