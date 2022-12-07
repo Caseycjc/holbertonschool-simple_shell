@@ -10,8 +10,8 @@
 #include <unistd.h>
 
 int main(void);
-char* hshell_readline();
-char** hshell_splitline(char *line);
+char *hshell_readline(void);
+char **hshell_splitline(char *line);
 void hshell_exec(char **args);
 
 #endif
