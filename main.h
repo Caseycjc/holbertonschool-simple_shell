@@ -16,12 +16,10 @@ char *hshell_readline(void);
 char **hshell_splitline(char *line);
 void hshell_exec(char **args);
 int execbuiltincommands(char **u_tokens, char *line);
-int _strcmp(char *s1, char *s2);
-int _putchar(char c);
 void _handle_exit(char **u_tokens, char *line);
 void _print_env(void);
 int _atoi(char *s);
-void frees_tokens(char **tokens);
+void frees_tokens(char **u_tokens);
 
 
 

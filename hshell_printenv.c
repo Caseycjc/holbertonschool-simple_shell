@@ -15,11 +15,11 @@ while (environ[i])
 {
 while (environ[i][j])
 {
-_putchar(environ[i][j]);
+putchar(environ[i][j]);
 j++;
 }
 if (j != 0)
-_putchar('\n');
+putchar('\n');
 i++;
 }
 }
