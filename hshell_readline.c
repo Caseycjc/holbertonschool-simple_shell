@@ -1,6 +1,12 @@
 #include "main.h"
 
-char* hshell_readline(void)
+/**
+ * hshell_readline - uses getline to read a line
+ *
+ * Return: the line
+ */
+
+char *hshell_readline(void)
 {
 	char *line = NULL;
 	size_t bufsize = 0;
@@ -18,6 +24,6 @@ char* hshell_readline(void)
 			exit(EXIT_FAILURE);
 		}
 	}
-	
+
 	return (line);
 }

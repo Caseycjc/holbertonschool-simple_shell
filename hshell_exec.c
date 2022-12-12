@@ -1,5 +1,10 @@
 #include "main.h"
 
+/**
+ * hshell_exec - launches and executes processes
+ * @args: an argument
+ * Return: nothing
+*/
 void hshell_exec(char **args)
 {
 	pid_t child_pid = fork();
@@ -13,11 +18,12 @@ void hshell_exec(char **args)
 	else if (child_pid > 0)
 	{
 		int status;
+
 		do
+
 		{
 			waitpid(child_pid, &status, WUNTRACED);
-		}
-		while (!WIFEXITED(status) && !WIFSIGNALED(status));
+		} while (!WIFEXITED(status) && !WIFSIGNALED(status));
 	}
 	else
 	{
