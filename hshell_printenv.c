@@ -2,7 +2,6 @@
 
 /**
 * _print_env - prints the environment built in
-* @_putchar: ...
 * Return: nothing
 */
 

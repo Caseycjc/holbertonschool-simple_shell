@@ -3,10 +3,7 @@
 * execbuiltincommands - executes a builtin command
 * @u_tokens: ..
 * @line: ..
-* @_strcmp: ...
-* @u_tokens: ...
-* @line: ...
-* return: 1 if theres a built-in commands, otherwise 0
+* Return: 1 if theres a built-in commands, otherwise 0
 */
 
 int execbuiltincommands(char **u_tokens, char *line)
