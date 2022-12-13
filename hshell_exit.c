@@ -7,9 +7,11 @@
 * Return: nothing to return
 */
 
-void _handle_exit(char **u_tokens, char *line)
+void _handle_exit(char **u_tokens, char *line);
+void frees_tokens(char **u_tokens)
 {
 int status = 0;
+char *line = NULL;
 
 if (u_tokens[1] == NULL || (!strcmp(u_tokens[1], "0")))
 {
