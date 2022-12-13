@@ -6,7 +6,7 @@
 * Return: 1 if theres a built-in commands, otherwise 0
 */
 
-int execbuiltincommands(char **u_tokens, char *line)
+int execbuiltincommands(char **u_tokens)
 {
 int i = 0;
 char *listbuiltincmds[] = { "exit", "env" };
@@ -17,7 +17,6 @@ if (strcmp(u_tokens[0], listbuiltincmds[i]) == 0)
 switch (i)
 {
 case 0:
-_handle_exit(u_tokens, line);
 __attribute__ ((fallthrough));
 case 1:
 _print_env();
